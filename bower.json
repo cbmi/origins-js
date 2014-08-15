@@ -1,0 +1,17 @@
+{
+  "name": "origins",
+  "version": "0.1.0",
+  "homepage": "https://github.com/cbmi/origins-js",
+  "authors": [
+    "Byron Ruth <b@devel.io>"
+  ],
+  "description": "JavaScript client library for Origins",
+  "license": "BSD",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
