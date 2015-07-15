@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# cd into the directory of this script.
+cd "$( dirname "${BASH_SOURCE[0]}" )"
+
+rm test.db
+chmod +x origins-generate-test
+
+origins generate test | origins transact --format=csv --storage="bolt" --path="./test.db" > /dev/null
+
+origins http --storage="bolt" --path="./test.db" & 
+HTTP_PID=$!
+
+open ./index.html &
+
+sleep 1s
+kill -KILL $HTTP_PID

@@ -12,3 +12,5 @@ cdn
 bower_components
 node_modules
 _SpecRunner.html
+
+*.db
