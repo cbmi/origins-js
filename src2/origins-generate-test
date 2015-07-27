@@ -1,0 +1,40 @@
+#!/usr/bin/env python3
+
+import csv
+import random
+import sys
+
+
+HEADER = (
+    'domain',
+    'entity',
+    'attribute',
+    'value',
+)
+
+
+def shuffled_range(len):
+    a = list(range(len))
+    random.shuffle(a)
+    return a
+
+
+def main():
+    w = csv.writer(sys.stdout)
+    w.writerow(HEADER)
+
+    for i in shuffled_range(3):
+        for j in shuffled_range(4):
+            for k in shuffled_range(5):
+                for p in shuffled_range(6):
+                    w.writerow((
+                        'domain' + str(i),
+                        'entity' + str(j),
+                        'attr' + str(k),
+                        'value' + str(p),
+                    ))
+    sys.stdout.flush()
+
+
+if __name__ == '__main__':
+    main()
