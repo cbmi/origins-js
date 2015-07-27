@@ -14,3 +14,5 @@ node_modules
 _SpecRunner.html
 
 *.db
+
+src2/origins_bundle.js
